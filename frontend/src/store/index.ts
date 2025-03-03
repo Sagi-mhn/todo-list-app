@@ -51,8 +51,8 @@ export default createStore({
       };
 
       state.todos.push(newTodo); // Ajoute en fin de tableau
-      state.newText = '';        // Vide le champ de saisie
-      state.nextTodoId++;        // Incrémente l'ID
+      state.newText = '';        
+      state.nextTodoId++;        
       alert("Todo added");
     },
     MARK_AS_DONE(state, id) {
@@ -73,7 +73,7 @@ export default createStore({
       }
       const index = state.todos.findIndex(todo => todo.id === id);
   if (index !== -1) {
-    state.todos.splice(index, 1); // Supprime le bon élément
+    state.todos.splice(index, 1); // Pour sup le bon élément
     alert("Todo removed");
   } else {
     alert("Todo not found");
